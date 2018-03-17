@@ -3,6 +3,7 @@ var app = require('express')();
 var server = require('http').createServer(app);
 var io = require('socket.io')(server);
 var fs = require('fs');
+var newButtons = require('./newButtons');
 
 var fifo = process.env.PIANOBAR_FIFO || 'ctl';
 var listenPort = process.env.PATIOBAR_PORT || 3000;
@@ -72,6 +73,11 @@ io.on('connection', function(socket) {
 		var stationId = data.stationId;
 		var cmd = 's' + stationId + '\n';
 		PidoraCTL(cmd);
+	});
+	
+	socket.on('scriptCall', function(data) {
+		console.log('received scriptCall ' + data);
+		newButtons.callScript(data.call);
 	});
 
 app.post('/start', function(request, response){

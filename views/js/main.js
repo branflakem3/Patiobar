@@ -76,6 +76,21 @@ function SongController($scope, socket) {
 			document.getElementById("love").className = "btn btn-success pull-left";
 		}
 	});
+   
+   $scope.controlPB = function(call) {
+      //alert("controlPB called");
+      socket.emit('scriptCall', { call: call });
+   }
 
 
+}
+
+function NewButtonController($scope, $http) {
+  /*New buttons code
+ $scope.controlPB = function(t){
+   $http.post('http://localhost:8080/scriptCall',{t:t});
+   $console.log('controlPB: ' + t);
+ }/*.success(function(data){
+  console.log(data);
+ })*/;
 }

@@ -45,6 +45,10 @@
 						<button type="button" class="btn btn-default" ng-click="sendCommand(')');"> <span class="glyphicon glyphicon-volume-up"></span> </button>
 						<button type="button" title="Tired (shelve for a month)" class="btn btn-default" ng-click="sendCommand('t');"> <span class="glyphicon glyphicon-calendar"></span> </button>
 						<button type="button" class="pull-right btn btn-default" ng-click="sendCommand('-');"> <span class="glyphicon glyphicon-thumbs-down"></span> </button>
+						<br><br>
+						<button type="button" class="btn btn-default" id="stopPan" ng-click="sendCommand('q');">Stop Pandora</button>
+						<button type="button" class="btn btn-default" id="startPan" ng-click="controlPB('start');">Start Pandora</button>
+						<button type="button" class="btn btn-default" id="retartPB" ng-click="controlPB('restart');">Restart Patio Bar</button>
 					</div>
 				</div> <!-- End text-center -->
 			</div> <!-- End Player -->

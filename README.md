@@ -47,9 +47,10 @@ Support
 If something doesn't work, please open a
 [github issue](https://github.com/kylejohnson/Patiobar/issues).
 
-##New Buttons
+New Buttons
 -------------
-added start and stop Pianobar buttons and a restart Patiobar button
+Added start and stop Pianobar buttons and a restart Patiobar button
 after install execute
 bash ~/Patiobar/scripts/installscripts.sh
-then run as above
+You'll need to add ~/bin to your PATH variable if you havn't already
+Then run as above

@@ -1,0 +1,5 @@
+#!/bin/bash
+
+cd /home/james/Patiobar
+
+screen -S pianobar -d -m bash -c 'pianobar'
